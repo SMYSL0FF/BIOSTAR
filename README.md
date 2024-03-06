@@ -1,6 +1,6 @@
-# Мой Проект
+# BIOSTAR
 
-Это мой удивительный проект, который делает что-то полезное или интересное!
+Диплом блин
 
 [![Лицензия](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Скачать](https://img.shields.io/badge/Download-v1.0-green.svg)](https://github.com/yourusername/yourproject/releases/tag/v1.0)
