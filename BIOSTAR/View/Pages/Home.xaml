@@ -1,0 +1,76 @@
+﻿<Page x:Class="BIOSTAR.View.Pages.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+      xmlns:local="clr-namespace:BIOSTAR.ViewModels"
+      mc:Ignorable="d" 
+      d:DesignHeight="660" d:DesignWidth="1220"
+      Title="Home">
+    <Page.Resources>
+        <local:ChartViewModel x:Key="viewModel"/>
+    </Page.Resources>
+    <Grid DataContext="{StaticResource viewModel}">
+        <Border CornerRadius="24 0 24 0" Background="#F2F3F4"  >
+            <Grid>
+                <Border CornerRadius="24" Background="White"  Margin="15,15,430,15">
+                    <Grid>
+                        <Line X1="0" Y1="0" X2="800" Y2="0" Stroke="#26000000" StrokeThickness="1" Margin="0,59,0,-59"/>
+                        <TextBlock Text="Текущие заказы"
+               HorizontalAlignment="Center"
+               TextAlignment="Center"
+               Margin="0,10,0,576"
+               FontSize="26"
+               FontWeight="Bold"/>
+                    </Grid>
+                    <Border.Effect>
+                        <DropShadowEffect ShadowDepth="10" 
+                  Direction="315" 
+                  Color="Black" 
+                  Opacity="0.25" 
+                  BlurRadius="20"/>
+                    </Border.Effect>
+                </Border>
+                <Border CornerRadius="24" Background="White"  Margin="810,15,15,340">
+                    <Grid>
+                        <Line X1="0" Y1="0" X2="400" Y2="0" Stroke="#26000000" StrokeThickness="1" Margin="0,59,0,-59"/>
+                        <TextBlock Text="Мастера на рабочем месте"
+                                   FontSize="26"
+                                   FontWeight="Bold"
+                                   TextAlignment="Center" Margin="24,10,23,259"/>
+                        <lvc:PieChart Series="{Binding PieSeriesCollection}" LegendLocation="Bottom"
+                      Width="300" Margin="40,60,40,10" />
+
+
+                    </Grid>
+                    <Border.Effect>
+                        <DropShadowEffect ShadowDepth="10" 
+          Direction="315" 
+          Color="Black" 
+          Opacity="0.25" 
+          BlurRadius="200"/>
+                    </Border.Effect>
+                </Border>
+
+                <Border CornerRadius="24" Background="White"  Margin="810,340,15,15">
+                    <Grid>
+                        <Line X1="0" Y1="0" X2="400" Y2="0" Stroke="#26000000" StrokeThickness="1" Margin="0,59,0,-59"/>
+                        <TextBlock Text="Новости"
+   HorizontalAlignment="Center"
+   TextAlignment="Center"
+   FontSize="26"
+   FontWeight="Bold" Margin="0,10,0,254"/>
+                    </Grid>
+                    <Border.Effect>
+                        <DropShadowEffect ShadowDepth="10"
+                          Direction="315"
+                          Color="Black"
+                          Opacity="0.25"
+                          BlurRadius="20"/>
+                    </Border.Effect>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

@@ -1,0 +1,189 @@
+﻿<Page x:Class="BIOSTAR.View.Pages.Orders"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local1="clr-namespace:BIOSTAR.ViewModels"
+      mc:Ignorable="d" 
+      d:DesignHeight="660" d:DesignWidth="1220"
+      Title="Orders">
+
+    <Page.Resources>
+        <local1:ChartViewModelOrders x:Key="viewModelOrders"/>
+    </Page.Resources>
+
+    <Grid DataContext="{StaticResource viewModelOrders}">
+        <Border CornerRadius="24 0 24 0" Background="#F2F3F4"  >
+            <Grid>
+                <Border CornerRadius="24" Background="White"  Margin="15,15,430,15">
+                    <Grid>
+                        <Line X1="0" Y1="0" X2="780" Y2="0" Stroke="#26000000" StrokeThickness="1" Margin="0,59,0,-59"/>
+                        <TextBlock Text="Заявка на ремонт"
+            HorizontalAlignment="Center"
+            TextAlignment="Center"
+            Margin="0,10,0,576"
+            FontSize="26"
+            FontWeight="Bold"/>
+
+                        <StackPanel Orientation="Vertical" Margin="60,100,0 250" HorizontalAlignment="Left">
+                            <!--<TextBlock Text="ФИО" Margin="20 0 0 5" FontSize="14" FontWeight="Bold"/>-->
+                            <Border BorderBrush="Black" CornerRadius="24" Width="300" Height="50" Background="#D9D9D9">
+                                <TextBox x:Name="FIO"
+                                     Background="Transparent"
+                                     BorderThickness="0"
+                                     Padding="10,10,10,10"
+                                     FontSize="17"
+                                     VerticalContentAlignment="Center"
+                                     Foreground="Black"/>
+
+                            </Border>
+                            <Border BorderBrush="Black" Margin="0 50" CornerRadius="24" Width="300" Height="50" Background="#D9D9D9">
+                            <TextBox x:Name="Adress"
+                                     Background="Transparent"
+                                     BorderThickness="0"
+                                     Padding="10,10,10,10"
+                                     FontSize="17"
+                                     VerticalContentAlignment="Center"
+                                     Foreground="Black"/>
+                        </Border>
+
+                            <Border BorderBrush="Black" CornerRadius="24" Width="300" Height="50" Background="#D9D9D9">
+                            <TextBox x:Name="Phone_number"
+                                     Background="Transparent"
+                                     BorderThickness="0"
+                                     Padding="10,10,10,10"
+                                     FontSize="17"
+                                     VerticalContentAlignment="Center"
+                                     Foreground="Black"/>
+                        </Border>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" Margin="0,100,60,250" HorizontalAlignment="Right">
+                            <Border BorderBrush="Black" CornerRadius="24" Width="300" Height="50" Background="#D9D9D9">
+                                <TextBox x:Name="Model_device"
+                                         Background="Transparent"
+                                         BorderThickness="0"
+                                         Padding="10,10,10,10"
+                                         FontSize="17"
+                                         VerticalContentAlignment="Center"
+                                         Foreground="Black"/>
+
+                            </Border>
+
+                            <Border BorderBrush="Black" Margin="0 50" CornerRadius="24" Width="300" Height="50" Background="#D9D9D9">
+                                <TextBox x:Name="malfunction"
+                                         Background="Transparent"
+                                         BorderThickness="0"
+                                         Padding="10,10,10,10"
+                                         FontSize="17"
+                                         VerticalContentAlignment="Center"
+                                         Foreground="Black"/>
+                            </Border>
+
+                            <Border BorderBrush="Black" CornerRadius="24" Width="300" Height="50" Background="#D9D9D9">
+                                <TextBox x:Name="Comment"
+                                         Background="Transparent"
+                                         BorderThickness="0"
+                                         Padding="10,10,10,10"
+                                         FontSize="17"
+                                         VerticalContentAlignment="Center"
+                                         Foreground="Black"/>
+                            </Border>
+                        </StackPanel>
+
+                        <Border CornerRadius="24" Background="#004085" BorderBrush="Black"
+                                       Width="250"
+                                       Height="50"
+                                       VerticalAlignment="Top"
+                                       HorizontalAlignment="Center"
+                                       Margin="0 400 0 0">
+                                 <Button Content="Новая заявка"
+                                           Height="50"
+                                           Background="Transparent"
+                                           BorderThickness="0"
+                                           Foreground="White"
+                                           FontSize="16"
+                                           FontWeight="Bold"/>
+                                   
+                                </Border>
+                    </Grid>
+                    <Border.Effect>
+                        <DropShadowEffect ShadowDepth="10" 
+               Direction="315" 
+               Color="Black" 
+               Opacity="0.25" 
+               BlurRadius="20"/>
+                    </Border.Effect>
+                </Border>
+                <Border CornerRadius="24" Background="White"  Margin="810,15,15,428">
+                    <Grid>
+                        <Line X1="0" Y1="0" X2="430" Y2="0" Stroke="#26000000" StrokeThickness="1" Margin="0,59,0,-59"/>
+                        <TextBlock Text="Нагрузка на СЦ"
+                                FontSize="26"
+                                FontWeight="Bold"
+                                TextAlignment="Center" Margin="24,10,23,171"/>
+                        <lvc:PieChart Series="{Binding PieSeriesCollection}" LegendLocation="Bottom"
+                   Width="300" Margin="40,60,40,10" />
+
+
+                    </Grid>
+                    <Border.Effect>
+                        <DropShadowEffect ShadowDepth="10" 
+       Direction="315" 
+       Color="Black" 
+       Opacity="0.25" 
+       BlurRadius="200"/>
+                    </Border.Effect>
+                </Border>
+
+                <Border CornerRadius="24" Background="White"  Margin="810,248,15,15">
+                    
+                    <Grid Height="312" VerticalAlignment="Bottom">
+                            <Grid.Resources>
+                            <Style
+      x:Key="CustomCalendarDayButton"
+      TargetType="CalendarDayButton"
+      BasedOn="{StaticResource MaterialDesignCalendarDayButton}">
+                                <Setter
+        Property="materialDesign:CalendarAssist.SelectionColor"
+        Value="#6699CC" />
+                                <Setter
+        Property="materialDesign:CalendarAssist.SelectionForegroundColor"
+        Value="Black" />
+                            </Style>
+                            <Style
+      x:Key="CustomCalendarButton"
+      TargetType="CalendarButton"
+      BasedOn="{StaticResource MaterialDesignCalendarButton}">
+                                    <Setter
+        Property="materialDesign:CalendarAssist.SelectionColor"
+        Value="#6699CC" />
+                                    <Setter
+        Property="materialDesign:CalendarAssist.SelectionForegroundColor"
+        Value="Black" />
+                                </Style>
+                            </Grid.Resources>
+                            <Calendar
+                                Language="ru-RU"
+    materialDesign:CalendarAssist.HeaderBackground="Transparent"
+    materialDesign:CalendarAssist.HeaderForeground="Black"
+    Background="White"
+    CalendarButtonStyle="{StaticResource CustomCalendarButton}"
+    CalendarDayButtonStyle="{StaticResource CustomCalendarDayButton}"
+    Foreground="Black" Margin="10,-75,10,10" />
+                        </Grid>
+                    
+                   <Border.Effect>
+                    <DropShadowEffect ShadowDepth="10" 
+       Direction="315" 
+       Color="Black" 
+       Opacity="0.25" 
+       BlurRadius="200"/>
+                    </Border.Effect>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
