@@ -27,9 +27,9 @@
             FontSize="26"
             FontWeight="Bold"/>
 
-                        <StackPanel Orientation="Vertical" Margin="60,100,0 250" HorizontalAlignment="Left">
-                            <!--<TextBlock Text="ФИО" Margin="20 0 0 5" FontSize="14" FontWeight="Bold"/>-->
-                            <Border BorderBrush="Black" CornerRadius="24" Width="300" Height="50" Background="#D9D9D9">
+                        <StackPanel Orientation="Vertical" Margin="60,40,0 250" HorizontalAlignment="Left">
+                            <TextBlock Text="ФИО" Margin="5 30 0 5" FontSize="14" FontWeight="Bold"/>
+                            <Border BorderBrush="Black" CornerRadius="12" Width="300" Height="50" Background="#D9D9D9">
                                 <TextBox x:Name="FIO"
                                      Background="Transparent"
                                      BorderThickness="0"
@@ -39,7 +39,8 @@
                                      Foreground="Black"/>
 
                             </Border>
-                            <Border BorderBrush="Black" Margin="0 50" CornerRadius="24" Width="300" Height="50" Background="#D9D9D9">
+                            <TextBlock Text="Адрес" Margin="5 30 0 5" FontSize="14" FontWeight="Bold"/>
+                            <Border BorderBrush="Black" CornerRadius="12" Width="300" Height="50" Background="#D9D9D9">
                             <TextBox x:Name="Adress"
                                      Background="Transparent"
                                      BorderThickness="0"
@@ -48,8 +49,8 @@
                                      VerticalContentAlignment="Center"
                                      Foreground="Black"/>
                         </Border>
-
-                            <Border BorderBrush="Black" CornerRadius="24" Width="300" Height="50" Background="#D9D9D9">
+                            <TextBlock Text="Номер телефона" Margin="5 30 0 5" FontSize="14" FontWeight="Bold"/>
+                            <Border BorderBrush="Black" CornerRadius="12" Width="300" Height="50" Background="#D9D9D9">
                             <TextBox x:Name="Phone_number"
                                      Background="Transparent"
                                      BorderThickness="0"
@@ -60,8 +61,9 @@
                         </Border>
                         </StackPanel>
 
-                        <StackPanel Orientation="Vertical" Margin="0,100,60,250" HorizontalAlignment="Right">
-                            <Border BorderBrush="Black" CornerRadius="24" Width="300" Height="50" Background="#D9D9D9">
+                        <StackPanel Orientation="Vertical" Margin="0,40,60,250" HorizontalAlignment="Right">
+                            <TextBlock Text="Модель устройства" Margin="20 30 0 5" FontSize="14" FontWeight="Bold"/>
+                            <Border BorderBrush="Black" CornerRadius="12" Width="300" Height="50" Background="#D9D9D9">
                                 <TextBox x:Name="Model_device"
                                          Background="Transparent"
                                          BorderThickness="0"
@@ -71,8 +73,8 @@
                                          Foreground="Black"/>
 
                             </Border>
-
-                            <Border BorderBrush="Black" Margin="0 50" CornerRadius="24" Width="300" Height="50" Background="#D9D9D9">
+                            <TextBlock Text="Неисправность" Margin="5 30 0 5" FontSize="14" FontWeight="Bold"/>
+                            <Border BorderBrush="Black"  CornerRadius="12" Width="300" Height="50" Background="#D9D9D9">
                                 <TextBox x:Name="malfunction"
                                          Background="Transparent"
                                          BorderThickness="0"
@@ -81,8 +83,8 @@
                                          VerticalContentAlignment="Center"
                                          Foreground="Black"/>
                             </Border>
-
-                            <Border BorderBrush="Black" CornerRadius="24" Width="300" Height="50" Background="#D9D9D9">
+                            <TextBlock Text="Комментарий" Margin="5 30 0 5" FontSize="14" FontWeight="Bold"/>
+                            <Border BorderBrush="Black" CornerRadius="12" Width="300" Height="50" Background="#D9D9D9">
                                 <TextBox x:Name="Comment"
                                          Background="Transparent"
                                          BorderThickness="0"

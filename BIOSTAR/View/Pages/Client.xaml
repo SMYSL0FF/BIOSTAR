@@ -20,8 +20,6 @@
         Margin="0,10,0,576"
         FontSize="26"
         FontWeight="Bold"/>
-                        <RichTextBox Name="richTextBox" Margin="0,59,0,0"/>
-
                     </Grid>
                     <Border.Effect>
                         <DropShadowEffect ShadowDepth="10" 

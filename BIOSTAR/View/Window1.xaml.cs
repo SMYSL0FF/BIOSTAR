@@ -86,5 +86,10 @@ namespace BIOSTAR.View
         {
             FrameNavigate.FrameObject.Navigate(new Pages.Client());
         }
+
+        private void Grid_MouseDown_3(object sender, MouseButtonEventArgs e)
+        {
+            FrameNavigate.FrameObject.Navigate(new Pages.reports());
+        }
     }
 }
