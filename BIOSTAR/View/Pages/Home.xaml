@@ -17,6 +17,52 @@
                 <Border CornerRadius="24" Background="White"  Margin="15,15,430,15">
                     <Grid>
                         <Line X1="0" Y1="0" X2="800" Y2="0" Stroke="#26000000" StrokeThickness="1" Margin="0,59,0,-59"/>
+
+                        <DataGrid x:Name="OrderInf" AutoGenerateColumns="False"  Margin="0,60,0,15">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Width="Auto"
+                            CanUserResize="False"
+                            Header="ID заказа"
+                            Binding="{Binding order_id}"
+                            FontSize="15"/>
+                                <DataGridTextColumn Width="Auto"
+                            CanUserResize="False"
+                            Header="Клиент"
+                            Binding="{Binding Clients.full_name}"
+                            FontSize="15"/>
+                                <DataGridTextColumn Width="Auto"
+                            CanUserResize="False"
+                            Header="Тип устройства"
+                            Binding="{Binding Devices.device_type}"
+                            FontSize="15"/>
+                                <DataGridTextColumn Width="Auto"
+                                                    CanUserResize="False"
+                                                    Header="Бренд"
+                                                    Binding="{Binding Devices.brand}"
+                                                    FontSize="15"/>
+                                <DataGridTextColumn Width="Auto"
+                                                    CanUserResize="False"
+                                                    Header="Модель"
+                                                    Binding="{Binding Devices.model}"
+                                                    FontSize="15"/>
+                                <DataGridTextColumn Width="Auto"
+                            CanUserResize="False"
+                            Header="Описание"
+                            Binding="{Binding description}"
+                            FontSize="15"/>
+                                <DataGridTextColumn Width="Auto"
+                            CanUserResize="False"
+                            Header="Дата"
+                            Binding="{Binding appointment_date}"
+                            FontSize="15"/>
+                                <DataGridTextColumn Width="Auto"
+                                                    CanUserResize="False"
+                                                    Header="Статус"
+                                                    Binding="{Binding status}"
+                                                    FontSize="15"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+
                         <TextBlock Text="Текущие заказы"
                HorizontalAlignment="Center"
                TextAlignment="Center"

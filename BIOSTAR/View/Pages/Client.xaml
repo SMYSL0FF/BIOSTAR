@@ -7,29 +7,58 @@
       mc:Ignorable="d" 
       d:DesignHeight="660" d:DesignWidth="1220"
       Title="Client">
-    
+
     <Grid >
-            <Border CornerRadius="24 0 24 0" Background="#F2F3F4"  >
+        <Border CornerRadius="24 0 24 0" Background="#F2F3F4" >
             <Grid>
-                <Border CornerRadius="24" Background="White"  Margin="15,15,15,15">
+                <Border CornerRadius="24" Background="White" Margin="15,15,15,15">
                     <Grid>
                         <Line X1="0" Y1="0" X2="1200" Y2="0" Stroke="#26000000" StrokeThickness="1" Margin="0,59,0,-59"/>
                         <TextBlock Text="Клиенты"
-        HorizontalAlignment="Center"
-        TextAlignment="Center"
-        Margin="0,10,0,576"
-        FontSize="26"
-        FontWeight="Bold"/>
+                                   HorizontalAlignment="Center"
+                                   TextAlignment="Center"
+                                   Margin="0,10,0,576"
+                                   FontSize="26"
+                                   FontWeight="Bold"/>
+                        <DataGrid x:Name="ClientInf" AutoGenerateColumns="False"  Margin="0,60,0,15">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Width="Auto"
+                                                    CanUserResize="False"
+                                                    Header="Имя"
+                                                    Binding="{Binding full_name}"
+                                                    FontSize="15"/>
+                                <DataGridTextColumn Width="Auto"
+                                                    CanUserResize="False"
+                                                    Header="Почта"
+                                                    Binding="{Binding email}"
+                                                    FontSize="15"/>
+                                <DataGridTextColumn Width="Auto"
+                                                    CanUserResize="False"
+                                                    Header="Номер телефона"
+                                                    Binding="{Binding phone_number}"
+                                                    FontSize="15"/>
+                                <DataGridTextColumn Width="Auto"
+                                                    CanUserResize="False"
+                                                    Header="Адрес"
+                                                    Binding="{Binding address}"
+                                                    FontSize="15"/>
+                                <DataGridTextColumn Width="Auto"
+                                                    CanUserResize="False"
+                                                    Header="Дата регистарции"
+                                                    Binding="{Binding registration_date}"
+                                                    FontSize="15"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
                     </Grid>
                     <Border.Effect>
                         <DropShadowEffect ShadowDepth="10" 
-           Direction="315" 
-           Color="Black" 
-           Opacity="0.25" 
-           BlurRadius="20"/>
+                                          Direction="315" 
+                                          Color="Black" 
+                                          Opacity="0.25" 
+                                          BlurRadius="20"/>
                     </Border.Effect>
                 </Border>
             </Grid>
         </Border>
-        </Grid>
+    </Grid>
 </Page>

@@ -1,5 +1,6 @@
 ﻿using BIOSTAR.Core;
 using System;
+using BIOSTAR.Model;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -28,6 +29,7 @@ namespace BIOSTAR
             InitializeComponent();
             FrameNavigate.FrameObject = LoginFrame;
             LoginFrame.Navigate(new Login());
+            FrameNavigate.DB = new RepairServiceDBEntities();
         }
   
         private void PackIcon_MouseDown(object sender, MouseButtonEventArgs e)

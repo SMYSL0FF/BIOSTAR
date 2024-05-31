@@ -1,4 +1,5 @@
 ﻿using BIOSTAR.Core;
+using BIOSTAR.Model;
 using BIOSTAR.View.Authorization;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,7 @@ namespace BIOSTAR.View
             InitializeComponent();
             this.Opacity = 0;
             FrameNavigate.FrameObject = WindowFrame;
+            FrameNavigate.DB = new RepairServiceDBEntities();
             WindowFrame.Navigate(new Pages.Home());
         }
 
@@ -90,6 +92,12 @@ namespace BIOSTAR.View
         private void Grid_MouseDown_3(object sender, MouseButtonEventArgs e)
         {
             FrameNavigate.FrameObject.Navigate(new Pages.reports());
+        }
+
+        private void PackIcon_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            CheckAdmin window = new CheckAdmin();
+            window.Show();
         }
     }
 }

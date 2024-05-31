@@ -1,4 +1,6 @@
-﻿using BIOSTAR.ViewModels;
+﻿using BIOSTAR.Core;
+using BIOSTAR.Model;
+using BIOSTAR.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace BIOSTAR.View.Pages
 {
     /// <summary>
@@ -25,7 +28,7 @@ namespace BIOSTAR.View.Pages
         public Home()
         {
             InitializeComponent();
-            
+            OrderInf.ItemsSource = FrameNavigate.DB.RepairOrders.ToList();
         }
     }
 }

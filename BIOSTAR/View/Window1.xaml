@@ -60,9 +60,9 @@
                     Grid.Column="1"
                     Margin="0,15,10,0">
 
-            <materialDesign:PackIcon Kind="BellOutline" Width="36" Height="36" Foreground="#004085"/>
+            <materialDesign:PackIcon Kind="BellOutline" Width="36" Height="36" Foreground="#004085" Cursor="Hand"/>
 
-            <materialDesign:PackIcon Kind="Account" Width="36" Height="36" Foreground="#004085"/>
+            <materialDesign:PackIcon Kind="Account" Width="36" Height="36" Foreground="#004085" Cursor="Hand"/>
 
             <materialDesign:PackIcon Kind="CloseCircle"
                          Width="36"
@@ -124,10 +124,10 @@
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <materialDesign:PackIcon Kind="ChartTimelineVariantShimmer" Width="36" Height="36" Foreground="#004085"/>
+                            <materialDesign:PackIcon Kind="ChartTimelineVariantShimmer" Width="36" Height="36" Foreground="#004085" Cursor="Hand"/>
                             <TextBlock Text="Отчеты" Foreground="#004085" FontSize="16" Grid.Column="1" VerticalAlignment="Center" Margin="10,0,0,0"/>
                         </Grid>
-                        <materialDesign:PackIcon Kind="CogOutline"  Width="36" Height="36" Margin="0 430 0 0" Foreground="#004085"/>
+                        <materialDesign:PackIcon MouseDown="PackIcon_MouseDown_1" Kind="CogOutline" Cursor="Hand" Width="36" Height="36" Margin="0 430 0 0" Foreground="#004085"/>
                     </StackPanel>
 
 

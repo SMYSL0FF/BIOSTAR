@@ -1,5 +1,4 @@
-﻿using BIOSTAR.Core;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,14 +16,13 @@ using System.Windows.Shapes;
 namespace BIOSTAR.View.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для Client.xaml
+    /// Логика взаимодействия для settings.xaml
     /// </summary>
-    public partial class Client : Page
+    public partial class settings : Page
     {
-        public Client()
+        public settings()
         {
             InitializeComponent();
-            ClientInf.ItemsSource = FrameNavigate.DB.Clients.ToList();
         }
     }
 }
