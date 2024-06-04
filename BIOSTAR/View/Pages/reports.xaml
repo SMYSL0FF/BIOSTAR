@@ -92,15 +92,48 @@
                     </Border.Effect>
                 </Border>
 
-                <Border CornerRadius="24" Background="White"  Margin="810,248,15,15">
+                <Border CornerRadius="24" Background="White" Margin="810,248,15,15">
+                    <Grid>
+                        <Line X1="0" Y1="0" X2="430" Y2="0" Stroke="#26000000" StrokeThickness="1" Margin="0,59,0,-59"/>
+                        <TextBlock Text="Создание отчета"
+                   FontSize="26"
+                   FontWeight="Bold"
+                   TextAlignment="Center" Margin="24,10,23,171"/>
+
+                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock Text="Выберите параметры"
+                       FontSize="16"
+                       FontWeight="Bold"
+                       Margin="0,0,0,10"
+                       Foreground="#FF495057" 
+                       TextAlignment="Center"/>
+
+                            <ComboBox x:Name="ReportType" Width="260" Height="30" Margin="0,10">
+                                <ComboBoxItem Content="Ежедневный"/>
+                                <ComboBoxItem Content="Еженедельный"/>
+                                <ComboBoxItem Content="Ежемесячный"/>
+                            </ComboBox>
+
+                            <DatePicker x:Name="StartDate" Width="260" Height="30" Margin="0,10"/>
+                            <DatePicker x:Name="EndDate" Width="260" Height="30" Margin="0,10"/>
+
+                            <Button x:Name="GenerateReportButton" Content="Создать отчет"
+                    Width="260" Height="40" Margin="0,20"
+                    Background="#004085"
+                    Foreground="White"
+                    FontSize="16"
+                    FontWeight="Bold"/>
+                        </StackPanel>
+                    </Grid>
                     <Border.Effect>
                         <DropShadowEffect ShadowDepth="10" 
-                                          Direction="315" 
-                                          Color="Black" 
-                                          Opacity="0.25" 
-                                          BlurRadius="200"/>
+                          Direction="315" 
+                          Color="Black" 
+                          Opacity="0.25" 
+                          BlurRadius="20"/>
                     </Border.Effect>
                 </Border>
+
             </Grid>
         </Border>
     </Grid>
