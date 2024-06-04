@@ -30,5 +30,22 @@ namespace BIOSTAR.View.Pages
             InitializeComponent();
             OrderInf.ItemsSource = FrameNavigate.DB.RepairOrders.ToList();
         }
+
+        private async void Save_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            await FrameNavigate.DB.SaveChangesAsync();
+            MessageBox.Show("Изменения сохранены!",
+                    "Системное уведомление",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Information);
+        }
+
+        private void BtnUpdate_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            OrderInf.ItemsSource = FrameNavigate.DB.RepairOrders.ToList();
+        }
     }
+
+    
+
 }

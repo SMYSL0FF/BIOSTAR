@@ -24,7 +24,15 @@ namespace BIOSTAR.View.Pages
         public reports()
         {
             InitializeComponent();
-            OrderInf.ItemsSource = FrameNavigate.DB.RepairOrders.ToList();
+            
+            // Получение данных из базы данных
+            var orders = FrameNavigate.DB.RepairOrders.ToList();
+
+            // Сортировка и фильтрация для отображения последних 5 заказов
+            var sortedOrders = orders.OrderByDescending(o => o.appointment_date).Take(5).ToList();
+
+            // Привязка данных к DataGrid
+            OrderInf.ItemsSource = sortedOrders;
         }
     }
 }

@@ -13,7 +13,7 @@
                 <Border CornerRadius="24" Background="White"  Margin="15,15,430,15">
                     <Grid>
                         <Line X1="0" Y1="0" X2="780" Y2="0" Stroke="#26000000" StrokeThickness="1" Margin="0,59,0,-59"/>
-                        <DataGrid x:Name="OrderInf" AutoGenerateColumns="False"  Margin="0,60,0,15">
+                        <DataGrid x:Name="OrderInf" AutoGenerateColumns="False" Margin="0,60,0,15" IsReadOnly="True">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Width="Auto"
                                                     CanUserResize="False"
@@ -46,9 +46,10 @@
                                                     Binding="{Binding description}"
                                                     FontSize="15"/>
                                 <DataGridTextColumn Width="Auto"
+                                                    CanUserSort="False"
                                                     CanUserResize="False"
                                                     Header="Дата"
-                                                    Binding="{Binding appointment_date}"
+                                                    Binding="{Binding appointment_date, StringFormat={}{0:dd.MM.yyyy}}"
                                                     FontSize="15"/>
                                 <DataGridTextColumn Width="Auto"
                                                     CanUserResize="False"

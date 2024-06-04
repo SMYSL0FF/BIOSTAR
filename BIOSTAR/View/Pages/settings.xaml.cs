@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BIOSTAR.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,29 @@ namespace BIOSTAR.View.Pages
         public settings()
         {
             InitializeComponent();
+        }
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            FrameNavigate.IsAdminAuthenticated = false;
+
+            MessageBox.Show("Возможности администратора отключены!",
+                "Системное уведомление",
+                MessageBoxButton.OK,
+                MessageBoxImage.Information);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            ChangeAdminPass window = new ChangeAdminPass();
+            window.Show();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            ChangeUserPass window = new ChangeUserPass();
+            window.Show();
         }
     }
 }

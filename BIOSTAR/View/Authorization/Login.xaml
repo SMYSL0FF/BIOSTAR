@@ -32,27 +32,27 @@
             <Border Margin="0 14 0 0" BorderBrush="Gray" CornerRadius="24" Width="260" Height="40" VerticalAlignment="Center" Background="White">
                 <Grid>
                     <PasswordBox x:Name="LPsbPassword" 
-  Background="Transparent" 
-  BorderThickness="0" 
-  Padding="10,10,10,10" 
-  VerticalContentAlignment="Center"
-  GotFocus="PasswordBox_GotFocus" 
-  LostFocus="PasswordBox_LostFocus"
-  Foreground="#B3495057" />
+                                 Background="Transparent" 
+                                 BorderThickness="0" 
+                                 Padding="10,10,10,10" 
+                                 VerticalContentAlignment="Center"
+                                 GotFocus="PasswordBox_GotFocus" 
+                                 LostFocus="PasswordBox_LostFocus"
+                                 Foreground="#B3495057" />
 
                     <TextBlock x:Name="hintText" 
-Text="Введите пароль" 
-VerticalAlignment="Center"
-HorizontalAlignment="Left"
-Margin="10,0,0,0"
-Foreground="#B3495057"
-Visibility="Visible"
-IsHitTestVisible="False"/>
+                               Text="Введите пароль"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"
+                               Margin="10,0,0,0"
+                               Foreground="#B3495057"
+                               Visibility="Visible"
+                               IsHitTestVisible="False"/>
                 </Grid>
 
             </Border>
             <TextBlock x:Name="TxbForgot" Text="Забыли пароль?"
-                Hyperlink.Click="TxbForgot_Click"
+                MouseDown="TxbForgot_Click"
                 Cursor="Hand"
                 FontSize="7"
                 Foreground="#7A7F85"

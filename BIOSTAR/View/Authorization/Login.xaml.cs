@@ -162,7 +162,7 @@ namespace BIOSTAR.View.Authorization
 
         private void TxbForgot_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Функция восстановления пароля еще не реализована.",
+            MessageBox.Show("Функция восстановления пароля еще не реализована. Обратитесь к администратору.",
                 "Системное сообщение",
                 MessageBoxButton.OK,
                 MessageBoxImage.Information);
