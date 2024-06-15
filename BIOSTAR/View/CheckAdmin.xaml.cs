@@ -121,8 +121,7 @@ namespace BIOSTAR.View
                     return;
                 }
 
-                // Перенаправить на страницу настроек
-                FrameNavigate.FrameObject.Navigate(new Pages.settings());
+               
                 CheckAdmin.GetWindow(this).Close();
             }
             catch (Exception ex)

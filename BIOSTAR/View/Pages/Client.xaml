@@ -3,7 +3,8 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:BIOSTAR.View.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:sys="clr-namespace:System;assembly=mscorlib"
       mc:Ignorable="d" 
       d:DesignHeight="660" d:DesignWidth="1220"
       Title="Client">
@@ -20,7 +21,17 @@
                                    Margin="0,10,0,576"
                                    FontSize="26"
                                    FontWeight="Bold"/>
-                        <DataGrid x:Name="ClientInf" AutoGenerateColumns="False"  Margin="0,60,0,15">
+                        
+                        <materialDesign:PackIcon Kind="ContentSave"
+                                                 x:Name="Save"  
+                                                 HorizontalAlignment="Right"
+                                                 Margin="0 5 5 0"
+                                                 Height="50"
+                                                 Width="50"
+                                                 MouseDown="Save_MouseDown"
+                                                 Cursor="Hand" ToolTip="Сохранить" Foreground="#004085"/>
+                        
+                        <DataGrid x:Name="ClientInf" AutoGenerateColumns="False" CanUserAddRows="False"  Margin="0,60,0,15">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Width="Auto"
                                                     CanUserResize="False"
@@ -41,11 +52,6 @@
                                                     CanUserResize="False"
                                                     Header="Адрес"
                                                     Binding="{Binding address}"
-                                                    FontSize="15"/>
-                                <DataGridTextColumn Width="Auto"
-                                                    CanUserResize="False"
-                                                    Header="Дата регистарции"
-                                                    Binding="{Binding registration_date}"
                                                     FontSize="15"/>
                             </DataGrid.Columns>
                         </DataGrid>

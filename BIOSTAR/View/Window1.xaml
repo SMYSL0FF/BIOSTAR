@@ -55,16 +55,12 @@
                    />
 
         </StackPanel>
-        <StackPanel Orientation="Horizontal" 
+                <StackPanel Orientation="Horizontal" 
                     HorizontalAlignment="Right"
                     Grid.Column="1"
                     Margin="0,15,10,0">
 
-            <materialDesign:PackIcon Kind="BellOutline" Width="36" Height="36" Foreground="#004085" Cursor="Hand"/>
-
-            <materialDesign:PackIcon Kind="Account" Width="36" Height="36" Foreground="#004085" Cursor="Hand"/>
-
-            <materialDesign:PackIcon Kind="CloseCircle"
+                    <materialDesign:PackIcon Kind="CloseCircle"
                          Width="36"
                          Height="36" 
                          Foreground="Red"

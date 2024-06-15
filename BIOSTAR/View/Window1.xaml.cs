@@ -95,9 +95,22 @@ namespace BIOSTAR.View
         }
 
         private void PackIcon_MouseDown_1(object sender, MouseButtonEventArgs e)
+
         {
-            CheckAdmin window = new CheckAdmin();
-            window.Show();
+            if (!FrameNavigate.IsAdminAuthenticated)
+            {
+                MessageBox.Show("Вы не авторизованы как администратор.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                // Перейти на страницу настроек
+                CheckAdmin window = new CheckAdmin();
+                window.Show();
+                return;
+            }
+
+            else 
+            {
+                FrameNavigate.FrameObject.Navigate(new Pages.settings());
+            }
+            
         }
     }
 }

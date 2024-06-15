@@ -82,6 +82,21 @@
                             FontSize="26"
                             FontWeight="Bold"
                             TextAlignment="Center" Margin="24,10,23,171"/>
+                        <TextBlock Text="Общее количество заказов: 150"
+                                   HorizontalAlignment="Left"
+                                   FontSize="17"
+                                   FontWeight="Medium"
+                                   Margin="10 70 0 0" Foreground="#FF727272"/>
+                        <TextBlock Text="Выполнено заказов: 120"
+                                   HorizontalAlignment="Left"
+                                   FontSize="17"
+                                   FontWeight="Medium"
+                                   Margin="10 100 0 0" Foreground="#FF727272"/>
+                        <TextBlock Text="В процессе: 20"
+                                   HorizontalAlignment="Left"
+                                   FontSize="17"
+                                   FontWeight="Medium"
+                                   Margin="10 130 0 0" Foreground="#FF727272"/>
                     </Grid>
                     <Border.Effect>
                         <DropShadowEffect ShadowDepth="10" 

@@ -1,4 +1,5 @@
 ﻿using BIOSTAR.Core;
+using BIOSTAR.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,5 +27,16 @@ namespace BIOSTAR.View.Pages
             InitializeComponent();
             ClientInf.ItemsSource = FrameNavigate.DB.Clients.ToList();
         }
+        private async void Save_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            await FrameNavigate.DB.SaveChangesAsync();
+            MessageBox.Show("Изменения сохранены!",
+                    "Системное уведомление",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Information);
+        }
+
     }
 }
+    
+

@@ -83,7 +83,16 @@ namespace BIOSTAR.View.Authorization
 
         private void Run_Click(object sender, RoutedEventArgs e)
         {
+            if (!FrameNavigate.IsAdminAuthenticated)
+            {
+                CheckAdmin window = new CheckAdmin();
+                window.Show();
+                return;
+            }
+            else 
+            { 
             FrameNavigate.FrameObject.Navigate(new Registration());
+            }
         }
 
 
