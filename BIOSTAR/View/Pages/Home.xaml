@@ -42,12 +42,6 @@
                                                     IsReadOnly="True"/>
                                 <DataGridTextColumn Width="Auto"
                                                     CanUserResize="False"
-                                                    Header="Бренд"
-                                                    Binding="{Binding Devices.brand}"
-                                                    FontSize="15"
-                                                    IsReadOnly="True"/>
-                                <DataGridTextColumn Width="Auto"
-                                                    CanUserResize="False"
                                                     Header="Модель"
                                                     Binding="{Binding Devices.model}"
                                                     FontSize="15"
@@ -57,6 +51,12 @@
                                                     Header="Описание"
                                                     Binding="{Binding description}"
                                                     FontSize="15"/>
+                                <DataGridTextColumn Width="Auto"
+                                                    CanUserResize="False"
+                                                    Header="Комментарий"
+                                                    Binding="{Binding repair_notes}"
+                                                    FontSize="15"
+                                                    />
                                 <DataGridTemplateColumn Header="Дата" Width="Auto">
                                     <DataGridTemplateColumn.CellTemplate>
                                         <DataTemplate>
